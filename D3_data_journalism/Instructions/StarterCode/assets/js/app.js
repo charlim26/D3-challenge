@@ -6,7 +6,7 @@ var margin = {
   top: 40,
   right: 40,
   bottom: 100,
-  left: 100
+  left: 120
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -150,7 +150,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
   circlesGroup.call(toolTip);
 
   circlesGroup.on("click", function (data) {
-    toolTip.show(data, this);
+    toolTip.show(data);
   })
     // onmouseout event
     .on("mouseout", function (data) {
